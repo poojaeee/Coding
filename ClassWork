@@ -1,1 +1,167 @@
 Feb 25***********
+1)
+package oops_intro;
+class Student{
+	int id;
+	String name; 
+}
+public class display_oops {
+	public static void main(String[] args) {
+		Student s1=new Student();
+		s1.id=1;
+		s1.name="pooja";
+		System.out.println(s1.id+"->"+s1.name);
+		Student s2=new Student();
+		s2.id=2;
+		s2.name="pooj";
+		System.out.println(s2.id+"->"+s2.name);
+	}
+
+
+}
+
+2)
+import java.util.Scanner;
+
+public class array_2d {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[][]=new int[n][n];
+		for (int i=0;i<n;i++) {
+			for(int j=0;j<n;j++) {
+				arr[i][j]=sc.nextInt();
+			}
+		}
+		for (int i=0;i<n;i++) {
+			for(int j=0;j<n;j++) {
+				System.out.println(arr[i][j]);
+			}
+		}
+		
+	}
+	
+
+}
+
+3)import java.util.Scanner;
+
+public class lower {
+	
+		public static boolean lower(int a[][],int n) {
+			boolean yes=true;
+			for(int i=0;i<n;i++) {
+				for(int j=i+1;j<n;j++) {
+					if(a[i][j]!=0) {
+					yes=false;
+					break;
+					}
+				}
+			}
+			return yes;
+		}
+
+		
+
+		public static void main(String[] args) {
+			Scanner sc=new Scanner(System.in);
+			int n=sc.nextInt();
+			int arr[][]=new int[n][n];
+			for (int i=0;i<n;i++) {
+				for(int j=0;j<n;j++) {
+					arr[i][j]=sc.nextInt();
+				}
+			}
+			if(lower(arr,n)) 
+				System.out.println("lower");
+			else
+				System.out.println("not lower");
+		sc.close();
+		}
+		
+
+	}
+
+4)import java.util.Scanner;
+
+public class symmetry_matrix {
+	public static boolean symentry(int a[][],int n) {
+		boolean yes=true;
+		for(int i=0;i<n;i++) {
+			for(int j=0;j<i;j++) {
+				if(a[i][j]!=a[j][i]) {
+				yes=false;
+				break;
+				}
+			}
+		}
+		return yes;
+	}
+
+	
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[][]=new int[n][n];
+		for (int i=0;i<n;i++) {
+			for(int j=0;j<n;j++) {
+				arr[i][j]=sc.nextInt();
+			}
+		}
+		if(symentry(arr,n)) 
+			System.out.println("yes");
+		else
+			System.out.println("no");
+	sc.close();
+	}
+	
+
+
+
+
+}
+
+5)import java.util.*;
+
+public class uppertriangular {
+	public static boolean upper(int a[][],int n) {
+		boolean yes=true;
+		for(int i=0;i<n;i++) {
+			for(int j=0;j<i;j++) {
+				if(a[i][j]!=0) {
+				yes=false;
+				break;
+				}
+			}
+		}
+		return yes;
+	}
+
+	
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[][]=new int[n][n];
+		for (int i=0;i<n;i++) {
+			for(int j=0;j<n;j++) {
+				arr[i][j]=sc.nextInt();
+			}
+		}
+		if(upper(arr,n)) 
+			System.out.println("upper");
+		else
+			System.out.println("not upper");
+	sc.close();
+	}
+	
+
+}
+
+
+
+
+
+
+***************************
